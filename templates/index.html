@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head><title>ECG Prediction</title></head>
+  <body>
+    <h1>ECG Prediction</h1>
+    <form method="post">
+      <!-- ...existing code... -->
+      <!-- One input per feature (names must match feature_names in app.py) -->
+      <label>hbpermin: <input name="hbpermin" type="number" step="any" required></label><br>
+      <label>Pseg: <input name="Pseg" type="number" step="any" required></label><br>
+      <label>PQseg: <input name="PQseg" type="number" step="any" required></label><br>
+      <label>QTseg: <input name="QTseg" type="number" step="any" required></label><br>
+      <label>STseg: <input name="STseg" type="number" step="any" required></label><br>
+      <label>Tseg: <input name="Tseg" type="number" step="any" required></label><br>
+      <label>RRmean: <input name="RRmean" type="number" step="any" required></label><br>
+      <label>SDRR: <input name="SDRR" type="number" step="any" required></label><br>
+      <label>RMSSD: <input name="RMSSD" type="number" step="any" required></label><br>
+      <label>NN50: <input name="NN50" type="number" step="any" required></label><br>
+      <label>pNN50: <input name="pNN50" type="number" step="any" required></label><br>
+      <label>SDSD: <input name="SDSD" type="number" step="any" required></label><br>
+      <button type="submit">Predict</button>
+    </form>
+
+    <!-- Display prediction_result provided by app.py -->
+    <div>
+      {{ prediction_result }}
+    </div>
+    <!-- ...existing code... -->
+  </body>
+</html>
